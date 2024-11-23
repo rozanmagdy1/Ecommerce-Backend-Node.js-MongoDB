@@ -1,0 +1,2186 @@
+{
+	"info": {
+		"_postman_id": "cb008372-5c9a-441f-a23d-2bb31ebdefe6",
+		"name": "E-Commerce Deployed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23282249"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "addProduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"barcode\" : \"06-06-01\",\r\n    \"generalCategory\" : \"woman\",\r\n    \"generalCategoryBarcode\" : \"01\",\r\n    \"category\" : \"bottoms\",\r\n    \"categoryBarcode\" : \"01-06\",\r\n    \"filter\":\"Shorts\",\r\n    \"count\" : 100,\r\n    \"price\" :100,\r\n    \"colors\" : [\"red\",\"blue\",\"black\",\"green,yellow\"],\r\n    \"size\" : [\"xs\",\"s\",\"m\",\"l\",\"xl\",\"xxl\"],\r\n    \"salePercentage\" : 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllProducts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products/6446a58e09334ad933989dc8",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products",
+										"6446a58e09334ad933989dc8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAvailableProducts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/available/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"available",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductsHaveSale",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/sale/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"sale",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductsByGeneralCategoryId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products/generalCategory/644691c80fd58cd81fbe4d51",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products",
+										"generalCategory",
+										"644691c80fd58cd81fbe4d51"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductsByCategoryId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products/category/644696029f27b0aae1471b2e",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products",
+										"category",
+										"644696029f27b0aae1471b2e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateProductById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\" : 200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products/6446a58e09334ad933989dc8",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products",
+										"6446a58e09334ad933989dc8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeProductStatus",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products/status/6446a58e09334ad933989dc8",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products",
+										"status",
+										"6446a58e09334ad933989dc8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteProductById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products/634c9b970d2b78ff1ef14fc8",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products",
+										"634c9b970d2b78ff1ef14fc8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllProducts",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteNotAvailableProducts",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/notAvailable/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"notAvailable",
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "general category",
+					"item": [
+						{
+							"name": "addGeneralCategory",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"barcode\" : \"04\",\r\n    \"name\" : \"beauty\",\r\n    \"count\" : 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/generalCategories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"generalCategories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllGeneralCategories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/generalCategories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"generalCategories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getGeneralCategoryById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/generalCategories/644691d90fd58cd81fbe4d53",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"generalCategories",
+										"644691d90fd58cd81fbe4d53"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeGeneralCategoryStatus",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/generalCategories/status/644691b00fd58cd81fbe4d50",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"generalCategories",
+										"status",
+										"644691b00fd58cd81fbe4d50"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateGeneralCtegoryById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"home\",\r\n    \"barcode\":\"00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/generalCategories/644691b00fd58cd81fbe4d50",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"generalCategories",
+										"644691b00fd58cd81fbe4d50"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteGeneralCategoryById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/generalCategories/634ca531ea2cc2db862e4642",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"generalCategories",
+										"634ca531ea2cc2db862e4642"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllGenaralCategories",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/generalCategories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"generalCategories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "addCategory",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Personal Care & Hair Wigs\",\r\n    \"generalCategoryName\": \"beauty\",\r\n    \"generalCategoryBarCode\": \"04\",\r\n    \"barcode\": \"04-06\",\r\n    \"count\": 1400\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCategories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCategorybyId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories/644696029f27b0aae1471b2e",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories",
+										"644696029f27b0aae1471b2e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCategoriesByGeneralCategoryId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories/generalCategory/644691d90fd58cd81fbe4d53",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories",
+										"generalCategory",
+										"644691d90fd58cd81fbe4d53"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateCategoryByid",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"filters\" : [\"Brushes Sets\",\"Eye & Lip Brushes\",\"Face Brushes & Brushes Accessories\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories/644699379f27b0aae1471b45",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories",
+										"644699379f27b0aae1471b45"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeCategoryStatus",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories/status/644696029f27b0aae1471b2e",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories",
+										"status",
+										"644696029f27b0aae1471b2e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteCategoryById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories/634cae86533ac7e3dd66ed03",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories",
+										"634cae86533ac7e3dd66ed03"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllCategories",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/categories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "makeOrder",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"streetAddress\": \"Bahry\",\r\n    \"City\": \"Alexandria\",\r\n    \"phone\": \"01030166199\",\r\n    \"items\": [\"a\",\"b\",\"c\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/orders",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllOrders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/orders",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOrdersByUserId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/orders/user/6348adf9723c686049e2d3ff",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"orders",
+										"user",
+										"6348adf9723c686049e2d3ff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllOrders",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/orders",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteOrdersByUserId",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/orders/user/6348adf9723c686049e2d4ff",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"orders",
+										"user",
+										"6348adf9723c686049e2d4ff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteOrderById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFuMjI2IiwiaWQiOiI2MzQ4YWRmOTcyM2M2ODYwNDllMmQzZmYiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODIzNDY0MDR9.GIwPCzxVqM89h_bHmHbolMm7Rk4cZKuYRjQOjeD30LM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/orders/6446b2fd2a511266d9669052",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"orders",
+										"6446b2fd2a511266d9669052"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy1@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/login",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\": \"rozan\",\r\n    \"lastname\": \"magdy\",\r\n    \"username\": \"rozanmagdy1@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"gender\": \"female\",\r\n    \"isAdmin\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/register",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/users",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/users/6446bf26fe32235ce033275f",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"users",
+										"6446bf26fe32235ce033275f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProfileData",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/user",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUserById",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/users/634c163d5b08bfe2f84dd57a",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"users",
+										"634c163d5b08bfe2f84dd57a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllUsers",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/users",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateUserById",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"lastname\" : \"Magdy\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/users/6446bf81fe32235ce0332761",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"users",
+										"6446bf81fe32235ce0332761"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeUserStatus",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/status/users/6446bf81fe32235ce0332761",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"status",
+										"users",
+										"6446bf81fe32235ce0332761"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgotPassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy1@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/forgotPassword",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"forgotPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resetPassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RlIjoiYmUiLCJpYXQiOjE2ODUwODcxOTAsImV4cCI6MTY4NTA5MDc5MH0.wXDl7Q0bCkRmIfXXCykFRYuqmFqm0_W6rZ2049D52ms",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy1@gmail.com\",\r\n    \"newPassword\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/resetPassword",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"resetPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy1@gmail.com\",\r\n    \"oldPassword\":\"12345\",\r\n    \"newPassword\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/changePassword",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "carts",
+					"item": [
+						{
+							"name": "addToCartForFirstTime",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"barcode\": \"01-06-01\",\r\n            \"generalCategory\": \"woman\",\r\n            \"generalCategoryBarcode\": \"01\",\r\n            \"category\": \"bottoms\",\r\n            \"categoryBarcode\": \"01-06\",\r\n            \"filter\": \"Shorts\",\r\n            \"count\": 2,\r\n            \"price\": 200,\r\n            \"colors\": \"red\",\r\n            \"size\": \"xs\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/carts",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addItemsToCart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"barcode\": \"01-06-01\",\r\n    \"generalCategory\": \"woman\",\r\n    \"generalCategoryBarcode\": \"01\",\r\n    \"category\": \"bottoms\",\r\n    \"categoryBarcode\": \"01-06\",\r\n    \"filter\": \"Shorts\",\r\n    \"count\": 5,\r\n    \"price\": 800,\r\n    \"colors\": \"blue\",\r\n    \"size\": \"lg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/carts",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCarts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/carts",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartByUserId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/carts/user/6348adf9723c686049e2d3ff",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"carts",
+										"user",
+										"6348adf9723c686049e2d3ff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartOfUserLoginNow",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmMjZmZTMyMjM1Y2UwMzMyNzVmIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MTY3fQ.y2WTNo7HBHAM_NmoZXoYKmX8zl1tF5vxIX6w8L_mevk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/admin/user/cart",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"admin",
+										"user",
+										"cart"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "website",
+			"item": [
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "getAllProducts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/products/6446a58e09334ad933989dc8",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"products",
+										"6446a58e09334ad933989dc8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAvailableProducts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/available/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"available",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductsHaveSale",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/sale/products",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"sale",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductsByGeneralCategoryId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/products/generalCategory/644691c80fd58cd81fbe4d51",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"products",
+										"generalCategory",
+										"644691c80fd58cd81fbe4d51"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductsByCategoryId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/products/category/644696029f27b0aae1471b2e",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"products",
+										"category",
+										"644696029f27b0aae1471b2e"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "general category",
+					"item": [
+						{
+							"name": "getAllGeneralCategories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/generalCategories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"generalCategories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getGeneralCategoryById",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/generalCategories/644691b00fd58cd81fbe4d50",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"generalCategories",
+										"644691b00fd58cd81fbe4d50"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "getAllCategories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/categories",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCategorybyId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/categories/644696029f27b0aae1471b2e",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"categories",
+										"644696029f27b0aae1471b2e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCategoriesByGeneralCategoryId Copy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/categories/generalCategory/644691b00fd58cd81fbe4d50",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"categories",
+										"generalCategory",
+										"644691b00fd58cd81fbe4d50"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "makeOrder",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"streetAddress\": \"sidiGaber\",\r\n    \"City\": \"Alexandria\",\r\n    \"phone\": \"01030789456\",\r\n    \"items\": [\"a\",\"b\",\"c\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/orders",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOrderByUserId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJld2FuMTAiLCJpZCI6IjYzNDllMjI5MWU5NzY2MTU4N2VkMDJlNSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODIzNTcxNzd9.hvW1WR76HwJKczqAyVEGOw832mk8ZFURUpsVf-Ix5rE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/orders/user",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"orders",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\": \"rozan\",\r\n    \"lastname\": \"magdy\",\r\n    \"username\": \"rozanmagdy5@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"gender\": \"female\",\r\n    \"isAdmin\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/register",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy5@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/login",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProfileData",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmODFmZTMyMjM1Y2UwMzMyNzYxIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MjExfQ.gTVGpFMUtfH-508brzr2Ns-pWzj9A619f_jzI1Tp6Vw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/user",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgotPassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmODFmZTMyMjM1Y2UwMzMyNzYxIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MjExfQ.gTVGpFMUtfH-508brzr2Ns-pWzj9A619f_jzI1Tp6Vw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy5@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/forgotPassword",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"forgotPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resetPassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmODFmZTMyMjM1Y2UwMzMyNzYxIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MjExfQ.gTVGpFMUtfH-508brzr2Ns-pWzj9A619f_jzI1Tp6Vw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy5@gmail.com\",\r\n    \"newPassword\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/resetPassword",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"resetPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoiNjQ0NmJmODFmZTMyMjM1Y2UwMzMyNzYxIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgyMzU4MjExfQ.gTVGpFMUtfH-508brzr2Ns-pWzj9A619f_jzI1Tp6Vw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rozanmagdy5@gmail.com\",\r\n    \"oldPassword\":\"12345\",\r\n    \"newPassword\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/changePassword",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "carts",
+					"item": [
+						{
+							"name": "addToCartForFirstTime",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhbmExMCIsImlkIjoiNjM0YzE2M2Q1YjA4YmZlMmY4NGRkNTdhIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY2NTk2NjYwNX0.hO-kUeVATkI_WZazc34wlbiHeSjsHH83ETBnAcbYXYo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"barcode\": \"01-06-01-40\",\r\n            \"generalCategory\": \"woman\",\r\n            \"generalCategoryBarcode\": \"01\",\r\n            \"category\": \"bottoms\",\r\n            \"categoryBarcode\": \"01-06\",\r\n            \"subCategory\": \"skirts\",\r\n            \"subCtegoryBarcode\": \"01-06-01\",\r\n            \"count\": 2,\r\n            \"price\": \"$100\",\r\n            \"colors\": \"red\",\r\n            \"size\": \"s\"\r\n        },\r\n        {\r\n            \"barcode\": \"02-01-01-40\",\r\n            \"generalCategory\": \"kids\",\r\n            \"generalCategoryBarcode\": \"02\",\r\n            \"category\": \"bottoms\",\r\n            \"categoryBarcode\": \"02-01\",\r\n            \"subCategory\": \"Pants\",\r\n            \"subCtegoryBarcode\": \"02-01-01\",\r\n            \"count\": 3,\r\n            \"price\": \"$300\",\r\n            \"colors\": \"black\",\r\n            \"size\": \"xl\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/carts",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addItemsToCart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhbmExMCIsImlkIjoiNjM0YzE2M2Q1YjA4YmZlMmY4NGRkNTdhIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY2NTk2NjYwNX0.hO-kUeVATkI_WZazc34wlbiHeSjsHH83ETBnAcbYXYo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"barcode\": \"01-06-01-40\",\r\n    \"generalCategory\": \"woman\",\r\n    \"generalCategoryBarcode\": \"01\",\r\n    \"category\": \"bottoms\",\r\n    \"categoryBarcode\": \"01-06\",\r\n    \"subCategory\": \"skirts\",\r\n    \"subCtegoryBarcode\": \"01-06-01\",\r\n    \"count\": 2,\r\n    \"price\": \"$100\",\r\n    \"colors\": \"red\",\r\n    \"size\": \"s\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/carts",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"carts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartOfUserLoginNow",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhbmExMCIsImlkIjoiNjM0YzE2M2Q1YjA4YmZlMmY4NGRkNTdhIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY2NTk2NjYwNX0.hO-kUeVATkI_WZazc34wlbiHeSjsHH83ETBnAcbYXYo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "ecommerce-backend-rho-mocha.vercel.app/website/user/cart",
+									"host": [
+										"ecommerce-backend-rho-mocha",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"website",
+										"user",
+										"cart"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
